@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import { Button, Row, Col, Icon, Steps, Card } from 'antd';
 import { Result } from 'ant-design-pro';
 
@@ -113,7 +114,7 @@ const extra = (
 const actions = (
   <Fragment>
     <Button type="primary">
-      返回列表
+      <Link to="/project/list/search">返回列表</Link>
     </Button>
     <Button>
       查看项目

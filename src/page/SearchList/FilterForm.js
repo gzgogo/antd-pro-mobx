@@ -36,21 +36,9 @@ class FilterForm extends React.Component {
               // { required: true, message: 'Please input your name!' }
             ]
           })(
-            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="推广计划名称" />
+            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="计划名称" />
           )}
         </FormItem>
-        {/* <FormItem>
-          {getFieldDecorator('type', {
-            rules: [
-              { required: true, message: 'Please input your type!' }
-            ]
-          })(
-            <Input
-              placeholder="类型"
-              prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-            />
-          )}
-        </FormItem> */}
         <FormItem>
           <Button
             type="primary"

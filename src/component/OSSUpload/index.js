@@ -108,6 +108,8 @@ class OSSUpload extends Component {
       } else {
         option.onError(result);
       }
+    } else {
+      console.error('请实现自己的STS接口，详情可参考 https://help.aliyun.com/document_detail/32077.html?spm=a2c4g.11186623.6.788.qrBaau');
     }
 
     this.setState({

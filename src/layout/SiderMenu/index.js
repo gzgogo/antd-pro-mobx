@@ -34,20 +34,13 @@ class SiderMenu extends Component {
           {/* <Link to="/project">首页</Link> */}
           <span>首页</span>
         </Menu.Item>
-        <SubMenu key="exchangemgr" title={<span><Icon type="mail" /><span>表单页</span></span>}>
-          <Menu.Item key="/project/exchangemgr/list"><Link to="/project/exchangemgr/list">基础表单</Link></Menu.Item>
-          <Menu.Item key="/project/exchangemgr/list"><Link to="/project/exchangemgr/list">分布表单</Link></Menu.Item>
-        </SubMenu>
-        <SubMenu key="mediamgr" title={<span><Icon type="table" /><span>列表页</span></span>}>
-          <Menu.Item key="/project/mediamgr/medialist"><Link to="/project/mediamgr/medialist">查询列表</Link></Menu.Item>
-          <Menu.Item key="/project/mediamgr/adlist"><Link to="/project/mediamgr/adlist">广告位管理</Link></Menu.Item>
-        </SubMenu>
-
         <SubMenu key="form" title={<span><Icon type="mail" /><span>表单页</span></span>}>
           <Menu.Item key="/project/form/basic"><Link to="/project/form/basic">基础表单</Link></Menu.Item>
           <Menu.Item key="/project/form/step"><Link to="/project/form/step">分步表单</Link></Menu.Item>
         </SubMenu>
-
+        <SubMenu key="list" title={<span><Icon type="mail" /><span>列表页</span></span>}>
+          <Menu.Item key="/project/list/search"><Link to="/project/list/search">查询列表</Link></Menu.Item>
+        </SubMenu>
         <SubMenu key="result" title={<span><Icon type="table" /><span>结果页</span></span>}>
           <Menu.Item key="/project/result/success">
             <Link to="/project/result/success">成功页</Link>
@@ -79,7 +72,6 @@ class SiderMenu extends Component {
           </Menu.Item>
           */}
         <SubMenu key="usercenter" title={<span><Icon type="user" /><span>个人中心</span></span>}>
-          <Menu.Item key="/project/usercenter/corporateInformation"><Link to="/project/usercenter/corporateInformation">企业信息</Link></Menu.Item>
           <Menu.Item key="/project/usercenter/account"><Link to="/project/usercenter/account">修改密码</Link></Menu.Item>
         </SubMenu>
       </Menu>

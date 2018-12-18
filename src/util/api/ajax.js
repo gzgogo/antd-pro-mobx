@@ -22,7 +22,7 @@ const noNeedAuthAPI = [
 axios.interceptors.request.use((config) => {
   // console.log('axios.interceptors.request.use ', process.env.API === 'mock');
   if (process.env.API === 'mock') {
-    config.url = `http://rap2api.taobao.org/app/mock/84445${config.url}`;
+    config.url = `http://rap2api.taobao.org/app/mock/121297/${config.method}${config.url}`;
   } else {
     if (noNeedAuthAPI.indexOf(config.url) > -1) {
       return config;

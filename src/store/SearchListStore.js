@@ -1,7 +1,7 @@
 import { extendObservable, action } from 'mobx';
-import { getCampaigns, terminateCampaign } from 'util/api';
+import { getPlans, removePlan } from 'util/api';
 
-export default class ListStore {
+export default class SearchListStore {
   constructor() {
     this.reset(true);
   }
@@ -31,7 +31,7 @@ export default class ListStore {
     this.setRoute(location, match, history);
 
     this.loading = true;
-    await this.getCampaigns('');
+    await this.getPlans('');
     this.loading = false;
   }
 
@@ -43,28 +43,28 @@ export default class ListStore {
 
   @action
   create = () => {
-    this.history.push('/project/exchangemgr/create');
+    this.history.push('/project/form/step');
   }
 
   @action
   search = async (values) => {
     // console.log(values);
-    await this.getCampaigns(values.name);
+    await this.getPlans(values.name);
   }
 
   @action
-  terminate = async (id) => {
+  remove = async (id) => {
     this.loading = true;
-    await terminateCampaign(id);
-    await getCampaigns('');
+    await removePlan(id);
+    await getPlans('');
     this.loading = false;
   }
 
   @action
-  async getCampaigns(name) {
-    const res = await getCampaigns(name, 0, 10000);
+  async getPlans(name) {
+    const res = await getPlans(name, 0, 10000);
     if (res.code === 0) {
-      this.data = res.data.list;
+      this.data = res.data;
     }
   }
 }

@@ -42,13 +42,6 @@ const Root = () => (
                 ? (
                   <App>
                     <Switch>
-                      <Route exact path="/project" component={Home} />
-
-                      <Route exact path="/project/exchangemgr/list" component={getComponentAsync(import(/* webpackChunkName: "ExchangePlanList" */ 'page/ExchangePlanList'))} />
-                      <Route exact path="/project/exchangemgr/create" component={getComponentAsync(import(/* webpackChunkName: "CreateExchangePlan" */ 'page/CreateExchangePlan'))} />
-                      <Route exact path="/project/exchangemgr/create/:id" component={getComponentAsync(import(/* webpackChunkName: "CreateExchangePlan" */ 'page/CreateExchangePlan'))} />
-                      <Route exact path="/project/exchangemgr/datareport/:id" component={getComponentAsync(import(/* webpackChunkName: "DataReport" */ 'page/DataReport'))} />
-
                       <Route exact path="/project/mediamgr/medialist" component={getComponentAsync(import(/* webpackChunkName: "MediaList" */ 'page/MediaList'))} />
                       <Route exact path="/project/mediamgr/medialist/MediaListModify" component={MediaListModify} />
                       <Route exact path="/project/mediamgr/adList" component={getComponentAsync(import(/* webpackChunkName: "ADList" */ 'page/ADList'))} />
@@ -57,24 +50,38 @@ const Root = () => (
                       <Route exact path="/project/mediamgr/createmp" component={CreateMiniProgram} />
                       <Route exact path="/project/mediamgr/createadp" component={CreateADPosition} />
 
-                      <Route exact path="/project/usercenter/corporateInformation" component={getComponentAsync(import(/* webpackChunkName: "CorporateInformation" */ 'page/CorporateInformation'))} />
                       <Route exact path="/project/usercenter/account" component={getComponentAsync(import(/* webpackChunkName: "Account" */ 'page/Account'))} />
+
+                      <Route exact path="/project" component={Home} />
 
                       <Route
                         exact
-                        path="/project/form/step/datareport/:id"
+                        path="/project/form/basic/:id?"
+                        component={getComponentAsync(import(/* webpackChunkName: "StepForm" */ 'page/BasicForm'))}
+                      />
+
+                      <Route
+                        exact
+                        path="/project/form/step/:id?"
+                        component={getComponentAsync(import(/* webpackChunkName: "StepForm" */ 'page/StepForm'))}
+                      />
+
+                      <Route
+                        exact
+                        path="/project/list/search"
+                        component={getComponentAsync(import(/* webpackChunkName: "SearchList" */ 'page/SearchList'))}
+                      />
+
+                      <Route
+                        exact
+                        path="/project/datareport/:id"
                         component={getComponentAsync(import(/* webpackChunkName: "DataReport" */ 'page/DataReport'))}
                       />
 
                       <Route
                         exact
-                        path="/project/form/step"
-                        component={getComponentAsync(import(/* webpackChunkName: "StepForm" */ 'page/StepForm'))}
-                      />
-                      <Route
-                        exact
-                        path="/project/form/step/:id"
-                        component={getComponentAsync(import(/* webpackChunkName: "EditStepForm" */ 'page/StepForm'))}
+                        path="/project/form/step/datareport/:id"
+                        component={getComponentAsync(import(/* webpackChunkName: "DataReport" */ 'page/DataReport'))}
                       />
 
                       <Route

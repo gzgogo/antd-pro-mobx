@@ -7,7 +7,7 @@ const PATHS = require("./PATHS");
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: path.resolve(PATHS.src, 'asset/template/index.html'),
   filename: path.resolve(PATHS.dist, 'index.html'),
-  favicon: path.resolve(PATHS.src, 'asset/image/favicon_16.ico')
+  favicon: path.resolve(PATHS.src, 'asset/image/favicon.png')
 });
 
 module.exports = {

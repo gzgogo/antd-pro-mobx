@@ -8,14 +8,14 @@ import DataTable from './DataTable';
 
 import styles from './style.less';
 
-@inject('exchagneListStore')
+@inject('searchListStore')
 @observer
 @cssModules(styles)
-class ExchangePlanList extends Component {
+class SearchList extends Component {
   constructor(props) {
     super(props);
 
-    this.store = this.props.exchagneListStore;
+    this.store = this.props.searchListStore;
   }
 
   async componentWillMount() {
@@ -25,18 +25,18 @@ class ExchangePlanList extends Component {
   }
 
   render() {
-    const { create, search, terminate, data } = this.store;
+    const { create, search, remove, data } = this.store;
     return (
       <div>
-        <PageHeader title="推广计划" content="" breadcrumbList={[{ title: '推广管理' }]} />
+        <PageHeader title="计划列表" content="" breadcrumbList={[{ title: '计划管理' }]} />
         <div className="content-card">
           <FilterForm onSubmit={search} />
           <Button type="primary" styleName="btn-create" onClick={create}>新建</Button>
-          <DataTable data={data} onTerminate={terminate} />
+          <DataTable data={data} onDelete={remove} />
         </div>
       </div>
     );
   }
 }
 
-export default ExchangePlanList;
+export default SearchList;
