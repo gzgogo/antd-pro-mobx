@@ -15,6 +15,11 @@ class Home extends Component {
   async componentWillMount() {
     const { onWillMount } = this.props.homeStore;
     await onWillMount();
+
+    window.dplus.track('page_load', {
+      name: '首页',
+      url: this.props.location.pathname
+    });
   }
 
   onChange = () => {
@@ -36,16 +41,14 @@ class Home extends Component {
   render() {
     const {
       loading,
-      todayDeposit,
-      todayWithdraw,
-      balance,
-      campaigns,
-      withdrawDashboardData,
-      withdrawChartOptions,
-      depositDashboardData,
-      depositChartOptions,
-      getWithdraw,
-      getDeposit
+      amount,
+      pv,
+      rate,
+      count,
+      indicators,
+      chartOptions,
+      changeIndicator,
+      changeDateRange
     } = this.props.homeStore;
 
     return (
@@ -53,24 +56,18 @@ class Home extends Component {
         <Card style={{ backgroundColor: '#f0f2f5' }} bordered={false}>
           <Dashboard
             loading={loading}
-            todayDeposit={todayDeposit}
-            todayWithdraw={todayWithdraw}
-            balance={balance}
-            campaigns={campaigns}
+            amount={amount}
+            pv={pv}
+            rate={rate}
+            count={count}
           />
           <LineChart
             loading={loading}
             ranges={this.getRagnes()}
-            dashboardData={withdrawDashboardData}
-            chartOptions={withdrawChartOptions}
-            onRangeChange={getWithdraw}
-          />
-          <LineChart
-            loading={loading}
-            ranges={this.getRagnes()}
-            dashboardData={depositDashboardData}
-            chartOptions={depositChartOptions}
-            onRangeChange={getDeposit}
+            indicators={indicators}
+            chartOptions={chartOptions}
+            onIndicatorChange={changeIndicator}
+            onRangeChange={changeDateRange}
           />
         </Card>
       </div>

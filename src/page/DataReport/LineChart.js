@@ -21,25 +21,26 @@ class LineChart extends Component {
 
   renderDashboard() {
     const { dashboardData } = this.props;
+    const { indicator1, indicator2, indicator3 } = dashboardData;
 
     return (
       <Row>
         <Col span={8}>
           <NumberInfo
-            subTitle="曝光"
-            total={dashboardData.impression}
+            subTitle="指标1"
+            total={indicator1}
           />
         </Col>
         <Col span={8}>
           <NumberInfo
-            subTitle="点击"
-            total={dashboardData.click}
+            subTitle="指标2"
+            total={indicator2}
           />
         </Col>
         <Col span={8}>
           <NumberInfo
-            subTitle="总取量"
-            total={dashboardData.data}
+            subTitle="指标3"
+            total={indicator3}
           />
         </Col>
       </Row>

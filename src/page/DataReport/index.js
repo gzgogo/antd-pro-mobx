@@ -9,22 +9,22 @@ import DataTable from './DataTable';
 import styles from './style.less';
 
 const breadcrumbList = [{
-  title: '推广管理'
+  title: '计划管理'
 }, {
-  title: '推广计划',
-  href: '/'
+  title: '计划列表',
+  href: '/project/list/search'
 }, {
   title: '数据报表'
 }];
 
-@inject('dashboardStore')
+@inject('reportStore')
 @observer
 @cssModules(styles)
 class DataReport extends Component {
   async componentWillMount() {
-    const { match, dashboardStore } = this.props;
+    const { match, reportStore } = this.props;
     const { id } = match.params || {};
-    await dashboardStore.onWillMount(id);
+    await reportStore.onWillMount(id);
   }
 
   render() {
@@ -32,10 +32,10 @@ class DataReport extends Component {
       loading,
       name,
       data,
-      withdrawDashboardData,
-      withdrawChartOptions,
-      getWithdraw
-    } = this.props.dashboardStore;
+      dashboardData,
+      chartOptions,
+      getReportData
+    } = this.props.reportStore;
 
     return (
       <div>
@@ -43,9 +43,9 @@ class DataReport extends Component {
         <Card style={{ backgroundColor: '#f0f2f5' }} bordered={false}>
           <LineChart
             loading={loading}
-            dashboardData={withdrawDashboardData}
-            chartOptions={withdrawChartOptions}
-            onRangeChange={getWithdraw}
+            dashboardData={dashboardData}
+            chartOptions={chartOptions}
+            onRangeChange={getReportData}
           />
           <DataTable
             loading={loading}

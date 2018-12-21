@@ -1,40 +1,40 @@
 import React from 'react';
 import { Col, Row } from 'antd';
+import { addThousandSeparator } from 'util';
 import SummaryCard from './SummaryCard';
 
-const Dashboard = ({ loading, todayDeposit, todayWithdraw, balance, campaigns }) => (
+const Dashboard = ({ loading, amount, pv, count, rate }) => (
   <Row gutter={16} type="flex" justify="space-around">
     <Col span={6} value={10}>
       <SummaryCard
-        title="今日存入"
-        intro="今日存入点击量
-"
+        title="总销售额"
+        intro="指标说明"
         loading={loading}
-        total={todayDeposit}
+        total={`¥${addThousandSeparator(amount)}`}
       />
     </Col>
     <Col span={6} value={10}>
       <SummaryCard
-        title="今日取用"
-        intro="今日取用点击量"
+        title="访问量"
+        intro="指标说明"
         loading={loading}
-        total={todayWithdraw}
+        total={addThousandSeparator(pv)}
       />
     </Col>
     <Col span={6} value={10}>
       <SummaryCard
-        title="存量余额"
-        intro="当前剩余可用点击量"
+        title="支付笔数"
+        intro="指标说明"
         loading={loading}
-        total={balance}
+        total={addThousandSeparator(count)}
       />
     </Col>
     <Col span={6} value={10}>
       <SummaryCard
-        title="当前存量计划"
-        intro="目前正在投放的推广计划"
+        title="运营活动效果"
+        intro="指标说明"
         loading={loading}
-        total={`${campaigns || 0}个`}
+        total={`${addThousandSeparator(rate)}%`}
       />
     </Col>
   </Row>

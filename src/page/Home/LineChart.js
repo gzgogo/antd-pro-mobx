@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import cssModules from 'react-css-modules';
 import moment from 'moment';
-import { Card, DatePicker, Row, Col } from 'antd';
+import { Card, DatePicker, Row, Col, Tabs } from 'antd';
 import { NumberInfo } from 'ant-design-pro';
 import ReactHighcharts from 'react-highcharts';
 import styles from './style.less';
 
 const { RangePicker } = DatePicker;
+const { TabPane } = Tabs;
 
 @cssModules(styles)
 class LineChart extends Component {
-  // static defaultProps = {
-  //   NumberTitle: '存量'
-  // }
+  handleTabChange = (key) => {
+    const { onIndicatorChange } = this.props;
+    typeof onIndicatorChange === 'function' && onIndicatorChange(key);
+  };
 
   renderDashboard() {
     const { dashboardData } = this.props;
@@ -21,23 +23,44 @@ class LineChart extends Component {
       <Row>
         <Col span={8}>
           <NumberInfo
-            subTitle="曝光"
-            total={dashboardData.impression}
+            subTitle="指标1"
+            total={dashboardData.indicator1}
           />
         </Col>
         <Col span={8}>
           <NumberInfo
-            subTitle="点击"
-            total={dashboardData.click}
+            subTitle="指标2"
+            total={dashboardData.indicator2}
           />
         </Col>
         <Col span={8}>
           <NumberInfo
-            subTitle={dashboardData.NumberTitle}
-            total={dashboardData.data}
+            subTitle="指标3"
+            total={dashboardData.indicator3}
           />
         </Col>
       </Row>
+    );
+  }
+
+  renderDashboradTab() {
+    const { indicators } = this.props;
+
+    return (
+      <div className="chart-tab">
+        <Tabs defaultActiveKey={(indicators[0] || {}).id} onChange={this.handleTabChange}>
+          {indicators.map(item => (
+            <TabPane
+              tab={
+                <Row gutter={8} style={{ width: 138, margin: '8px 0' }}>
+                  <NumberInfo subTitle={item.name} total={item.value} />
+                </Row>
+              }
+              key={item.id}
+            />
+          ))}
+        </Tabs>
+      </div>
     );
   }
 
@@ -57,7 +80,7 @@ class LineChart extends Component {
             onChange={onRangeChange}
           />
         </div>
-        {this.renderDashboard()}
+        {this.renderDashboradTab()}
         <div styleName="chart">
           <ReactHighcharts
             config={chartOptions}

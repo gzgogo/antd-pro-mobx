@@ -27,6 +27,11 @@ class StepForm extends Component {
     const { location, match, history } = this.props;
 
     await this.store.onWillMount(location, match, history);
+
+    window.dplus.track('page_load', {
+      name: '分步表单页',
+      url: this.props.location.pathname
+    });
   }
 
   handleNext = () => {

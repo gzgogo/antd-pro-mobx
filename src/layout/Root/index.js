@@ -11,10 +11,6 @@ import loginUtil from 'util/login';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import 'moment/locale/zh-cn';
 
-import MediaListModify from 'page/MediaList/MediaListModify';
-import ADListModify from 'page/ADList/ADListModify';
-import CreateMiniProgram from 'page/CreateMiniProgram';
-import CreateADPosition from 'page/CreateADPosition';
 import Home from 'page/Home';
 
 import 'antd/dist/antd.css';
@@ -42,14 +38,6 @@ const Root = () => (
                 ? (
                   <App>
                     <Switch>
-                      <Route exact path="/project/mediamgr/medialist" component={getComponentAsync(import(/* webpackChunkName: "MediaList" */ 'page/MediaList'))} />
-                      <Route exact path="/project/mediamgr/medialist/MediaListModify" component={MediaListModify} />
-                      <Route exact path="/project/mediamgr/adList" component={getComponentAsync(import(/* webpackChunkName: "ADList" */ 'page/ADList'))} />
-                      <Route exact path="/project/mediamgr/adList/ADListModify" component={ADListModify} />
-                      <Route exact path="/project/mediamgr/adReport" component={getComponentAsync(import(/* webpackChunkName: "ADReport" */ 'page/ADList/ADReport'))} />
-                      <Route exact path="/project/mediamgr/createmp" component={CreateMiniProgram} />
-                      <Route exact path="/project/mediamgr/createadp" component={CreateADPosition} />
-
                       <Route exact path="/project/usercenter/account" component={getComponentAsync(import(/* webpackChunkName: "Account" */ 'page/Account'))} />
 
                       <Route exact path="/project" component={Home} />

@@ -108,7 +108,10 @@ module.exports = env => {
               loader: "css-loader",
             },
             {
-              loader: "less-loader"
+              loader: "less-loader",
+              options: {
+                javascriptEnabled: true
+              }
             }
           ]
         },

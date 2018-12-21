@@ -26,7 +26,7 @@ class AppFooter extends React.Component {
     ],
     copyright: (
       <div>
-        Copyright <Icon type="copyright" /> 撮和（北京）科技有限公司
+        Copyright <Icon type="copyright" /> Copyright  2018 蚂蚁金服体验技术部出品
       </div>
     )
   }

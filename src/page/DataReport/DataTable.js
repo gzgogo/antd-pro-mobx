@@ -8,17 +8,9 @@ class DataTable extends React.Component {
       dataIndex: 'time',
       key: 'time'
     }, {
-      title: '曝光量',
-      dataIndex: 'impression',
-      key: 'impression'
-    }, {
-      title: '点击率',
-      dataIndex: 'ctr',
-      key: 'ctr'
-    }, {
-      title: '取量',
-      dataIndex: 'data',
-      key: 'data'
+      title: '访问量',
+      dataIndex: 'value',
+      key: 'value'
     }];
 
     return columns;

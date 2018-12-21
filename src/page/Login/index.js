@@ -77,10 +77,15 @@ class LoginPage extends Component {
             <div styleName="header">
               <Link to="/">
                 {/* <img alt="logo" className={styles.logo} src={logo} /> */}
-                <span styleName="title">快引擎</span>
+                <img
+                  className={styles.logo}
+                  src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+                  alt="logo"
+                />
+                <span styleName="title">Ant Design</span>
               </Link>
             </div>
-            <div styleName="desc">在这里，为你的小程序装上马达</div>
+            <div styleName="desc">Ant Design 是西湖区最具影响力的 Web 设计规范</div>
           </div>
           <div styleName="login">
             <Login ref={this.phoneRef} onSubmit={this.handleSubmit}>

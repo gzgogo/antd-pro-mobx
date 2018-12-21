@@ -78,8 +78,8 @@ export default class BasicFormStore {
     if (res.code === 0 && res.data) {
       const { name, description, type, subType, logoUrl, imageUrl } = res.data;
       this.fields.name.value = name;
-      this.fields.type.value = type;
-      this.fields.subType.value = subType;
+      this.fields.type.value = type.id;
+      this.fields.subType.value = subType.id;
       this.fields.description.value = description;
       this.fields.logo.value = {
         url: logoUrl,
