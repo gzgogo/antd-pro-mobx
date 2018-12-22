@@ -17,6 +17,7 @@ module.exports = env => {
     // compress: true,
     hot: true,
     inline: true,
+    disableHostCheck: true,
     // progress: true
   };
 

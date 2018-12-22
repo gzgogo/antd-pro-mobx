@@ -49,7 +49,7 @@ class BasicForm extends Component {
     return (
       <div>
         <Spin spinning={loading}>
-          <Card bordered={false}>
+          <Card>
             <Form
               wrappedComponentRef={f => (this.exchangeForm = f)}
               adLoading={adLoading}
@@ -65,10 +65,9 @@ class BasicForm extends Component {
             <Divider />
             <Card bordered={false}>
               <p>说明</p>
-              <p>落地UV</p>
-              <p>指广告主处的UV数，由撮和 SDK 统计</p>
-              <p>积分获取及消耗</p>
-              <p>如果需要，这里可以放一些关于产品的常见问题说明。如果需要，这里可以放一些关于产品的常见问题说明。这里可以放一些关于产品的常见问题说明。</p>
+              <p>名称说明</p>
+              <p>描述</p>
+              <p>如果需要，这里可以放一些关于产品的常见问题说明。</p>
             </Card>
           </Card>
         </Spin>
