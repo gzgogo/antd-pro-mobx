@@ -8,11 +8,11 @@ const PATHS = require("./PATHS");
 
 module.exports = merge(common, {
   entry: {
-    main: ['@babel/polyfill', path.resolve(PATHS.src, 'index.js')]
+    main: ['@babel/polyfill', path.resolve(PATHS.src, 'doc.js')]
   },
   output: {
     filename: '[name].[chunkhash:8].js',
-    path: path.resolve(PATHS.dist),
+    path: path.resolve(PATHS.doc),
     publicPath: '/'
   },
   mode: 'production',

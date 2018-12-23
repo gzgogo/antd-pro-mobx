@@ -11,9 +11,6 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: {
-    main: ['@babel/polyfill', path.resolve(PATHS.src, 'index.js')]
-  },
   module: {
     rules: [
       {

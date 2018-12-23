@@ -45,6 +45,9 @@ module.exports = env => {
   } */
 
   return merge(common, {
+    entry: {
+      main: ['@babel/polyfill', path.resolve(PATHS.src, 'index.js')]
+    },
     output: {
       filename: '[name].js',
       path: path.resolve(PATHS.dist),
