@@ -1,5 +1,6 @@
 const path = require("path");
 const merge = require('webpack-merge');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const autoprefixer = require('autoprefixer');
@@ -101,6 +102,11 @@ module.exports = merge(common, {
     new ExtractTextPlugin({
       filename: '[name].[hash].css',
       allChunks: true,
+    }),
+    new HtmlWebPackPlugin({
+      template: path.resolve(PATHS.src, 'asset/template/index.html'),
+      filename: path.resolve(PATHS.dist, 'index.html'),
+      favicon: path.resolve(PATHS.src, 'asset/image/favicon.png')
     }),
     // 注意一定要在HtmlWebpackPlugin之后引用
     // inline的name和runtimeChunk的name保持一致

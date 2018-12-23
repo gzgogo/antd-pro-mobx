@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const autoprefixer = require('autoprefixer');
 const common = require('./webpack.common');
 const PATHS = require('./PATHS');
@@ -130,6 +131,11 @@ module.exports = env => {
       new webpack.DefinePlugin({  // 为项目注入环境变量
         'process.env.API': JSON.stringify(API)
       }),
+      new HtmlWebPackPlugin({
+        template: path.resolve(PATHS.src, 'asset/template/index.html'),
+        filename: path.resolve(PATHS.dist, 'index.html'),
+        favicon: path.resolve(PATHS.src, 'asset/image/favicon.png')
+      })
     ]
   });
 };

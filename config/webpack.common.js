@@ -1,14 +1,7 @@
 const webpack = require('webpack');
 const path = require("path");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const PATHS = require("./PATHS");
-
-const htmlWebpackPlugin = new HtmlWebPackPlugin({
-  template: path.resolve(PATHS.src, 'asset/template/index.html'),
-  filename: path.resolve(PATHS.dist, 'index.html'),
-  favicon: path.resolve(PATHS.src, 'asset/image/favicon.png')
-});
 
 module.exports = {
   module: {
@@ -71,7 +64,6 @@ module.exports = {
     new CleanWebpackPlugin(['dist'], {
       root: PATHS.root
     }),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    htmlWebpackPlugin
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ]
 };

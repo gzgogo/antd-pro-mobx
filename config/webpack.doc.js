@@ -1,5 +1,7 @@
 const path = require("path");
 const merge = require('webpack-merge');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const autoprefixer = require('autoprefixer');
@@ -98,6 +100,14 @@ module.exports = merge(common, {
     hints: false
   },
   plugins: [
+    new CleanWebpackPlugin(['docs'], {
+      root: PATHS.root
+    }),
+    new HtmlWebPackPlugin({
+      template: path.resolve(PATHS.src, 'asset/template/index.html'),
+      filename: path.resolve(PATHS.doc, 'index.html'),
+      favicon: path.resolve(PATHS.src, 'asset/image/favicon.png')
+    }),
     new ExtractTextPlugin({
       filename: '[name].[hash].css',
       allChunks: true,
