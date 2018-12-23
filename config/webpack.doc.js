@@ -18,6 +18,7 @@ module.exports = merge(common, {
     // publicPath: '/'
   },
   mode: 'production',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
