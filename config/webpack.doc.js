@@ -15,7 +15,7 @@ module.exports = merge(common, {
   output: {
     filename: '[name].[chunkhash:8].js',
     path: path.resolve(PATHS.doc),
-    publicPath: '/'
+    // publicPath: '/'
   },
   mode: 'production',
   module: {
