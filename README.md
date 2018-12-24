@@ -2,7 +2,7 @@
 
 一个精简版的基于mobx的[Antd Design Pro](https://pro.ant.design/index-cn)
 
-[预览](http://gongzhen.coding.me/project)
+[预览](http://gongzhen.coding.me)
 
 ## 为什么做这个项目？
 [Antd Pro](https://pro.ant.design/index-cn) 是一个大而全，且高度封装的脚手架，帮开发者做了很多基础工作，但不免提升了学习成本， 尤其内部依赖了`dva `和`umi`，限制住了开发者的同时也让开发者失去了对 webpack 的绝对控制权。所 以我利用业务时间做了这个基于`mobx`的精简版antd pro，简化了登录注册流程，将`dva`换成了class based 的`mobx`，使代码结构更清晰更易组织，去掉了底层 umi，使用者可以直接控制 webpack，更灵 活，降低了学习成本，开发者可以快速上手，投入进业务开发。且内置了友盟统计，可以看到网站的 基本使用情况并使用高级分析，分群，画像，推送等高级功能。目前已有两家企业基于此开发并上线。
