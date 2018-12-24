@@ -1,5 +1,6 @@
 const path = require("path");
 const merge = require('webpack-merge');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
@@ -99,6 +100,9 @@ module.exports = merge(common, {
     hints: false
   },
   plugins: [
+    new CleanWebpackPlugin(['dist'], {
+      root: PATHS.root
+    }),
     new ExtractTextPlugin({
       filename: '[name].[hash].css',
       allChunks: true,

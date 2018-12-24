@@ -61,9 +61,6 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], {
-      root: PATHS.root
-    }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ]
 };

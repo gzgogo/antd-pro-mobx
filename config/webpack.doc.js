@@ -1,5 +1,6 @@
 const path = require("path");
 const merge = require('webpack-merge');
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -18,7 +19,7 @@ module.exports = merge(common, {
     // publicPath: '/'
   },
   mode: 'production',
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -112,6 +113,9 @@ module.exports = merge(common, {
     new ExtractTextPlugin({
       filename: '[name].[hash].css',
       allChunks: true,
+    }),
+    new webpack.DefinePlugin({  // 为项目注入环境变量
+      'process.env.API': JSON.stringify('mock')
     }),
     // 注意一定要在HtmlWebpackPlugin之后引用
     // inline的name和runtimeChunk的name保持一致
