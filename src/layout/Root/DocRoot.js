@@ -5,7 +5,6 @@ import { Provider } from 'mobx-react';
 import App from 'layout/App';
 import store from 'store';
 import { LocaleProvider } from 'antd';
-import loginUtil from 'util/login';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import 'moment/locale/zh-cn';
 
@@ -34,86 +33,80 @@ const Root = () => (
         <React.Fragment>
           <Switch>
             <Route exact path="/login" component={Login} />
-            {
-              loginUtil.isLogin()
-                ? (
-                  <App>
-                    <Switch>
-                      <Route
-                        exact
-                        path="/project/usercenter/account"
-                        component={Account}
-                      />
+            <App>
+              <Switch>
+                <Route
+                  exact
+                  path="/project/usercenter/account"
+                  component={Account}
+                />
 
-                      <Route exact path="/project" component={Home} />
+                <Route exact path="/project" component={Home} />
 
-                      <Route
-                        exact
-                        path="/project/form/basic/:id?"
-                        component={BasicForm}
-                      />
+                <Route
+                  exact
+                  path="/project/form/basic/:id?"
+                  component={BasicForm}
+                />
 
-                      <Route
-                        exact
-                        path="/project/form/step/:id?"
-                        component={StepForm}
-                      />
+                <Route
+                  exact
+                  path="/project/form/step/:id?"
+                  component={StepForm}
+                />
 
-                      <Route
-                        exact
-                        path="/project/list/search"
-                        component={SearchList}
-                      />
+                <Route
+                  exact
+                  path="/project/list/search"
+                  component={SearchList}
+                />
 
-                      <Route
-                        exact
-                        path="/project/datareport/:id"
-                        component={DataReport}
-                      />
+                <Route
+                  exact
+                  path="/project/datareport/:id"
+                  component={DataReport}
+                />
 
-                      <Route
-                        exact
-                        path="/project/form/step/datareport/:id"
-                        component={DataReport}
-                      />
+                <Route
+                  exact
+                  path="/project/form/step/datareport/:id"
+                  component={DataReport}
+                />
 
-                      <Route
-                        exact
-                        path="/project/result/success"
-                        component={Success}
-                      />
-                      <Route
-                        exact
-                        path="/project/result/error"
-                        component={Error}
-                      />
+                <Route
+                  exact
+                  path="/project/result/success"
+                  component={Success}
+                />
+                <Route
+                  exact
+                  path="/project/result/error"
+                  component={Error}
+                />
 
-                      <Route
-                        exact
-                        path="/project/exception/403"
-                        component={E403}
-                      />
-                      <Route
-                        exact
-                        path="/project/exception/404"
-                        component={E404}
-                      />
-                      <Route
-                        exact
-                        path="/project/exception/500"
-                        component={E500}
-                      />
+                <Route
+                  exact
+                  path="/project/exception/403"
+                  component={E403}
+                />
+                <Route
+                  exact
+                  path="/project/exception/404"
+                  component={E404}
+                />
+                <Route
+                  exact
+                  path="/project/exception/500"
+                  component={E500}
+                />
 
-                      <Redirect exact from="/" to="/project" />
+                <Redirect exact from="/" to="/project" />
 
-                      <Route
-                        component={E404}
-                      />
-                    </Switch>
-                  </App>
-                )
-                : <Route component={Login} />
-            }
+                <Route
+                  component={E404}
+                />
+              </Switch>
+            </App>
           </Switch>
         </React.Fragment>
       </BrowserRouter>
