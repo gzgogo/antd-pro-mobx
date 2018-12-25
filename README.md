@@ -1,6 +1,6 @@
 # Antd Pro Mobx
 
-一个精简版的基于mobx的[Antd Design Pro](https://pro.ant.design/index-cn)
+一个精简版的基于mobx的[Ant Design Pro](https://pro.ant.design/index-cn)
 
 [预览](http://gongzhen.coding.me)
 
