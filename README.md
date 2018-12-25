@@ -25,7 +25,8 @@
 1. CSS Modules使用了[react-css-modules](https://github.com/gajus/react-css-modules)方案，相比css-loader的modules方案更灵活。
 2. 增加了异步路由，方便首页做进一步优化。
 3. 增加了OSS上传组件，使用[STS](https://help.aliyun.com/document_detail/32077.html?spm=a2c4g.11186623.6.788.qrBaau)方案上传，需要开发者自行购买资源。
-3. 图表库由`BizChart`改用了`highcharts`，这个算不上优化，但是相对于阿里外的开发者`highcharts`可能更好用一些
+4. 图表库由`BizChart`改用了`highcharts`，这个算不上优化，但是相对于阿里外的开发者`highcharts`可能更好用一些
+5. 内置了[友盟](https://udplus.umeng.com/)统计，为前端路由跳转增加了page load事件
 
 ## 有哪些地方可以完善？
 1. 登录目前只有手机号+验证码直接登录，可以补充其他登录方式，但与此同时，你还要提供注册+密码找回+修改密码
