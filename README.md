@@ -6,7 +6,7 @@
 
 ## 使用方法
 * `npm run mock`: 使用[rap2](http://rap2.taobao.org/)工具mock接口
-* `npm run dev`: 使用实际接口，需要将webpack.dev.js文件第27行的’http://pre.xxx.com‘修改为实际地址
+* `npm run dev`: 使用实际接口，需要将webpack.dev.js文件第27行的 ’http://pre.xxx.com‘ 修改为实际地址
 * `npm run build`: 构建打包，可将生成的dist目录的内容交给后端
 * `npm run doc`: 该命令用于预览
 
