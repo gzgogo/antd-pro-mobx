@@ -1,12 +1,14 @@
 # Antd Pro Mobx
 
+[English](https://github.com/gzgogo/antd-pro-mobx/blob/master/en.md)
+
 一个精简版的基于mobx的[Ant Design Pro](https://pro.ant.design/index-cn)
 
 [预览](http://gongzhen.coding.me)
 
 ## 使用方法
 * `npm run mock`: 使用[rap2](http://rap2.taobao.org/)工具mock接口
-* `npm run dev`: 使用实际接口，需要将webpack.dev.js文件第27行的 ’http://pre.xxx.com‘ 修改为实际地址
+* `npm run dev`: 使用实际接口，需要将`webpack.dev.js`文件第27行的 ’http://pre.xxx.com‘ 修改为实际地址
 * `npm run build`: 构建打包，可将生成的dist目录的内容交给后端
 * `npm run doc`: 该命令用于预览
 
