@@ -34,7 +34,7 @@
 2. Added asynchronous routing to optimize the home page.
 3. Added OSS upload component to upload files by [STS](https://help.aliyun.com/document_detail/32077.html?spm=a2c4g.11186623.6.788.qrBaau).  You have to purchase STS.
 4. Replaced `BizChart` to `highcharts` .
-5. Built-in alliance statistics, Add `page load` event for font-end routing.
+5. Built-in [umeng](https://www.umeng.com/) statistics, Add `page load` event for font-end routing.
 
 ## What can be more perfect？
 1. This project only support `mobile number+captcha` for user login, you can add more other ways for login, but you have to provide a solution for registration, forgot password and change password.
