@@ -1,5 +1,5 @@
 简体中文 | [English](./en.md)
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 <h1 align="center">Antd Pro Mobx</h1>
 
@@ -72,6 +72,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/LeoChowChina"><img src="https://avatars2.githubusercontent.com/u/5009640?v=4" width="100px;" alt="Leo Chow"/><br /><sub><b>Leo Chow</b></sub></a><br /><a href="#translation-LeoChowChina" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/soguagirl"><img src="https://avatars2.githubusercontent.com/u/7897851?v=4" width="100px;" alt="soguagirl"/><br /><sub><b>soguagirl</b></sub></a><br /><a href="#ideas-soguagirl" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
