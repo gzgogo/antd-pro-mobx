@@ -1,8 +1,15 @@
-# Antd Pro Mobx
+简体中文 | [English](./en.md)
 
-[English](https://github.com/gzgogo/antd-pro-mobx/blob/master/en.md)
+<h1 align="center">Antd Pro Mobx</h1>
+
+<p align="center">
+  
+  <a href=""><img src="https://img.shields.io/badge/wxchat-459135899-brightgreen.svg?style=flat-square" alt="wechat"></a>
+  
+</p>
 
 一个精简版的基于mobx的[Ant Design Pro](https://pro.ant.design/index-cn)
+
 
 [预览](http://gongzhen.coding.me)
 
@@ -51,4 +58,8 @@
 5. axios
 6. antd + ant-design-pro
 7. ali-oss 6
+
+## LICENSE
+
+[MIT](LICENSE)
 
