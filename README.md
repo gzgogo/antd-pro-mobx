@@ -3,15 +3,13 @@
 <h1 align="center">Antd Pro Mobx</h1>
 
 <p align="center">
-  
+  <a href="http://gongzhen.coding.me"><img src="https://img.shields.io/badge/preview-%E9%A2%84%E8%A7%88-blue.svg?style=flat-square" alt="wechat"></a>
   <a href=""><img src="https://img.shields.io/badge/wxchat-459135899-brightgreen.svg?style=flat-square" alt="wechat"></a>
-  
 </p>
 
-一个精简版的基于mobx的[Ant Design Pro](https://pro.ant.design/index-cn)
-
-
-[预览](http://gongzhen.coding.me)
+<p align="center">
+  一个精简版的基于mobx的<a href="https://pro.ant.design/index-cn">Ant Design Pro</a>
+</p>
 
 ## 使用方法
 * `npm run mock`: 使用[rap2](http://rap2.taobao.org/)工具mock接口
