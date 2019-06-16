@@ -54,3 +54,5 @@ English | [简体中文](./README.md)
 6. antd + ant-design-pro
 7. ali-oss 6
 
+## LICENSE
+[MIT](LICENSE)
