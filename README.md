@@ -1,11 +1,11 @@
 简体中文 | [English](./en.md)
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 <h1 align="center">Antd Pro Mobx</h1>
 
 <p align="center">
-  <a href="http://gongzhen.coding.me"><img src="https://img.shields.io/badge/preview-%E9%A2%84%E8%A7%88-blue.svg?style=flat-square" alt="wechat"></a>
+  <a target="_blank" href="http://gongzhen.coding.me"><img src="https://img.shields.io/badge/preview-%E9%A2%84%E8%A7%88-blue.svg?style=flat-square" alt="wechat"></a>
   <a href=""><img src="https://img.shields.io/badge/wxchat-459135899-brightgreen.svg?style=flat-square" alt="wechat"></a>
+  <a href=""><img src="https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square" alt="wechat"></a>
 </p>
 
 <p align="center">
@@ -58,11 +58,6 @@
 6. antd + ant-design-pro
 7. ali-oss 6
 
-## LICENSE
-
-[MIT](LICENSE)
-
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -79,3 +74,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## LICENSE
+[MIT](LICENSE)
